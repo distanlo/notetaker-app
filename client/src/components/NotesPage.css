@@ -1,0 +1,204 @@
+.notes-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notes-header h1 {
+  color: #333;
+}
+
+.date-selector {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.date-selector input[type="date"] {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.create-button {
+  padding: 8px 16px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.create-button:hover {
+  background: #5568d3;
+}
+
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.note-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.note-header h3 {
+  color: #333;
+  margin: 0;
+}
+
+.note-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.note-actions button {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.note-actions button:hover {
+  background: #f0f0f0;
+}
+
+.note-actions button.delete {
+  color: #c33;
+  border-color: #c33;
+}
+
+.note-actions button.delete:hover {
+  background: #fee;
+}
+
+.note-content {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.note-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #e8eaf6;
+  color: #667eea;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 8px;
+}
+
+.empty-state p {
+  color: #999;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.empty-state button {
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.empty-state button:hover {
+  background: #5568d3;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .notes-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .notes-header h1 {
+    font-size: 24px;
+  }
+
+  .date-selector {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .date-selector input[type="date"] {
+    flex: 1;
+    min-width: 150px;
+  }
+
+  .create-button {
+    white-space: nowrap;
+  }
+
+  .note-card {
+    padding: 15px;
+  }
+
+  .note-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .note-header h3 {
+    font-size: 18px;
+    word-break: break-word;
+  }
+
+  .note-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .note-actions button {
+    flex: 1;
+    font-size: 13px;
+  }
+
+  .empty-state {
+    padding: 40px 15px;
+  }
+
+  .empty-state p {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,179 @@
+.tags-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tags-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.tags-header h1 {
+  color: #333;
+}
+
+.new-tag-form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.new-tag-form input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 200px;
+}
+
+.create-button {
+  padding: 8px 16px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.create-button:hover {
+  background: #5568d3;
+}
+
+.cancel-button {
+  padding: 8px 16px;
+  background: #f0f0f0;
+  color: #666;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.cancel-button:hover {
+  background: #e0e0e0;
+}
+
+.tags-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.tag-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tag-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.tag-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #667eea;
+  cursor: pointer;
+  flex: 1;
+}
+
+.tag-name:hover {
+  color: #5568d3;
+}
+
+.delete-tag-btn {
+  padding: 6px 12px;
+  border: 1px solid #c33;
+  background: white;
+  color: #c33;
+  border-radius: 5px;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.delete-tag-btn:hover {
+  background: #fee;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 8px;
+  grid-column: 1 / -1;
+}
+
+.empty-state p {
+  color: #999;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.empty-state button {
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.empty-state button:hover {
+  background: #5568d3;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .tags-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tags-header h1 {
+    font-size: 24px;
+  }
+
+  .new-tag-form {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .new-tag-form input {
+    flex: 1;
+    min-width: 150px;
+  }
+
+  .tags-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+  }
+
+  .tag-card {
+    padding: 15px;
+  }
+
+  .tag-name {
+    font-size: 16px;
+  }
+
+  .empty-state {
+    padding: 40px 15px;
+  }
+
+  .empty-state p {
+    font-size: 16px;
+  }
+}

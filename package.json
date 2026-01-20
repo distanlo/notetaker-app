@@ -1,0 +1,19 @@
+{
+  "name": "notetaker-app",
+  "version": "1.0.0",
+  "description": "Full-stack note-taking and to-do management app",
+  "scripts": {
+    "install": "cd server && npm install && cd ../client && npm install",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev"
+  },
+  "keywords": [
+    "notes",
+    "todo",
+    "productivity"
+  ],
+  "author": "",
+  "license": "MIT"
+}

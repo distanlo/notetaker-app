@@ -1,0 +1,109 @@
+.todos-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.todos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.todos-header h1 {
+  color: #333;
+}
+
+.filters {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+}
+
+.filter-checkbox input {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+.todos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.todo-with-context {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.todo-context {
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.note-title {
+  font-size: 13px;
+  color: #999;
+  font-style: italic;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 8px;
+}
+
+.empty-state p {
+  color: #999;
+  font-size: 16px;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .todos-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .todos-header h1 {
+    font-size: 24px;
+  }
+
+  .filters {
+    width: 100%;
+    gap: 15px;
+  }
+
+  .filter-checkbox {
+    font-size: 13px;
+  }
+
+  .filter-checkbox input {
+    width: 18px;
+    height: 18px;
+  }
+
+  .todo-with-context {
+    padding: 12px;
+  }
+
+  .empty-state {
+    padding: 40px 15px;
+  }
+}

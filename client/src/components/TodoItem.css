@@ -1,0 +1,177 @@
+.todo-item {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.todo-item.editing {
+  background: #f0f0ff;
+}
+
+.todo-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.todo-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.todo-text {
+  flex: 1;
+  color: #333;
+}
+
+.todo-text-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.todo-edit-section {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.todo-date-input {
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.todo-meta {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.todo-due-date {
+  font-size: 13px;
+  color: #666;
+  background: #fff3cd;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+.todo-tags {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.calendar-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: #666;
+  cursor: pointer;
+}
+
+.calendar-checkbox input {
+  cursor: pointer;
+}
+
+.todo-actions button {
+  padding: 4px 10px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 3px;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.todo-actions button:hover {
+  background: #f0f0f0;
+}
+
+.save-btn {
+  background: #667eea !important;
+  color: white !important;
+  border: none !important;
+}
+
+.save-btn:hover {
+  background: #5568d3 !important;
+}
+
+.cancel-btn {
+  background: #f0f0f0 !important;
+}
+
+.delete-btn {
+  color: #c33 !important;
+  border-color: #c33 !important;
+}
+
+.delete-btn:hover {
+  background: #fee !important;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .todo-item {
+    padding: 10px;
+  }
+
+  .todo-checkbox {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .todo-text {
+    font-size: 15px;
+    word-break: break-word;
+  }
+
+  .todo-text-input {
+    font-size: 15px;
+  }
+
+  .todo-meta {
+    gap: 8px;
+  }
+
+  .todo-due-date {
+    font-size: 12px;
+  }
+
+  .calendar-checkbox {
+    font-size: 12px;
+  }
+
+  .todo-actions {
+    gap: 8px;
+  }
+
+  .todo-actions button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
