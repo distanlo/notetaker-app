@@ -480,10 +480,10 @@ if (process.env.NODE_ENV === 'production') {
   console.log('Serving static files from:', clientPath);
   app.use(express.static(clientPath));
 
-  // Handle React routing, return all requests to React app
-  app.get('*', (req, res) => {
+  // Handle React routing - catch all non-API routes
+  app.get(/^\/(?!api).*/, (req, res) => {
     const indexPath = path.join(clientPath, 'index.html');
-    console.log('Sending index.html from:', indexPath);
+    console.log('Serving index.html for route:', req.path);
     res.sendFile(indexPath);
   });
 }
