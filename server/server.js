@@ -475,11 +475,16 @@ app.get('/api/tags/:tagId/items', authMiddleware, (req, res) => {
 // Serve static files in production
 if (process.env.NODE_ENV === 'production') {
   const path = require('path');
-  app.use(express.static(path.join(__dirname, '../client/dist')));
+  const clientPath = path.join(__dirname, '../client/dist');
+
+  console.log('Serving static files from:', clientPath);
+  app.use(express.static(clientPath));
 
   // Handle React routing, return all requests to React app
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
+    const indexPath = path.join(clientPath, 'index.html');
+    console.log('Sending index.html from:', indexPath);
+    res.sendFile(indexPath);
   });
 }
 

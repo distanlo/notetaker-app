@@ -8,4 +8,4 @@ cmds = ["npm install --prefix client", "npm install --prefix server"]
 cmds = ["npm run build --prefix client"]
 
 [start]
-cmd = "cd server && node server.js"
+cmd = "NODE_ENV=production node server/server.js"
