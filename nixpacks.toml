@@ -2,7 +2,7 @@
 nixPkgs = ["nodejs"]
 
 [phases.install]
-cmds = ["npm ci --prefix client", "npm ci --prefix server"]
+cmds = ["npm install --prefix client", "npm install --prefix server"]
 
 [phases.build]
 cmds = ["npm run build --prefix client"]
