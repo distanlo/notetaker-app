@@ -1,4 +1,5 @@
-require('dotenv').config();
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '.env') });
 const express = require('express');
 const cors = require('cors');
 const bcrypt = require('bcryptjs');
@@ -12,6 +13,11 @@ const PORT = process.env.PORT || 3001;
 // Middleware
 app.use(cors());
 app.use(express.json());
+
+// Health check endpoint
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok' });
+});
 
 // ============ AUTH ROUTES ============
 
@@ -489,6 +495,12 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Start server
-app.listen(PORT, '0.0.0.0', () => {
+const server = app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
+  console.log(`Environment: ${process.env.NODE_ENV}`);
+  console.log(`JWT_SECRET exists: ${!!process.env.JWT_SECRET}`);
+});
+
+server.on('error', (error) => {
+  console.error('Server error:', error);
 });
