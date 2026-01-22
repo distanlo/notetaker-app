@@ -14,8 +14,15 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
+// Request logging
+app.use((req, res, next) => {
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.url} from ${req.ip}`);
+  next();
+});
+
 // Health check endpoint
 app.get('/health', (req, res) => {
+  console.log('Health check hit!');
   res.status(200).json({ status: 'ok' });
 });
 
